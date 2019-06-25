@@ -15,6 +15,6 @@ app.use(require('./middleware/headers') )
 app.use("/users", user);
 app.use("/cookies", cookie);
 
-app.listen(process.env.PORT), function(){
+app.listen(process.env.PORT, function(){
     console.log('App is listening on PORT')
    });
