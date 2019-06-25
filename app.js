@@ -15,6 +15,6 @@ app.use(require('./middleware/headers') )
 app.use("/users", user);
 app.use("/cookies", cookie);
 
-app.listen(3005, function(){
+app.listen(process.env.PORT), function(){
     console.log('App is listening on 3005')
    });
