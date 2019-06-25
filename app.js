@@ -16,5 +16,5 @@ app.use("/users", user);
 app.use("/cookies", cookie);
 
 app.listen(process.env.PORT), function(){
-    console.log('App is listening on 3005')
+    console.log('App is listening on PORT')
    });
