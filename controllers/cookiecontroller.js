@@ -35,7 +35,7 @@ router.get('/mycookies', (req, res) => {
         .catch(err => res.status(500).json({ error: err}))
     })
 
-router.put('/:id', validateSession, (req,res) => {
+router.put('/mycookies/:id', validateSession, (req,res) => {
     Cookie.update(req.body.cookie, { where: { id: req.params.id, owner_id: req.user.id }, returning: true
 })
     .then(cookie => res.status(200).json(cookie))
