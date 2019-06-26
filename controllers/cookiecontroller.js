@@ -28,21 +28,20 @@ router.get ("/", (req, res) => {
 })
 
 router.get('/mycookies', validateSession, (req, res) => {
-    Cookie.findAll({ where:
-        { owner_id: req.user.id }
+    Cookie.findAll({ where: { owner_id: req.user.id }
     })
         .then(cookies => res.status(200).json(cookies))
         .catch(err => res.status(500).json({ error: err}))
     })
 
-router.put('/:id', validateSession, (req,res) => {
+router.put('/mycookies/:id', validateSession, (req,res) => {
     Cookie.update(req.body.cookie, { where: { id: req.params.id, owner_id: req.user.id }, returning: true
 })
     .then(cookie => res.status(200).json(cookie))
     .catch(err => res.status(500).json({err: err}))
 })
 
-router.delete('/:id', validateSession, (req,res) => {
+router.delete('/mycookies/:id', validateSession, (req,res) => {
     Cookie.destroy({ where: { id: req.params.id, owner_id: req.user.id}
 })
     .then(cookie => res.status(200).json(cookie))
