@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 var user = require('./controllers/usercontroller');
 var cookie = require('./controllers/cookiecontroller');
 
-sequelize.sync({force: true});
+sequelize.sync();
 
 app.use(bodyParser.json())
 app.use(require('./middleware/headers') )
