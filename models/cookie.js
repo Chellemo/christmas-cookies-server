@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
         instructions: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        submittedby: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     })
 }
