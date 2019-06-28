@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        submittedby: {
+        submittedBy: {
             type: DataTypes.STRING,
             allowNull: false
         }
