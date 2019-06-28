@@ -31,7 +31,7 @@ router.get ("/", (req, res) => {
         .catch(err => res.status(500).json({err: err}))
 })
 
-router.get('/', validateSession, (req, res) => {
+router.get('/mycookies', validateSession, (req, res) => {
     Cookie.findAll({ where: { owner_id: req.user.id }
     })
         .then(cookies => res.status(200).json(cookies))
