@@ -26,7 +26,7 @@ Cookie.create({
 })
 
 router.get ("/", (req, res) => {
-    Cookie.findAll()
+    Cookie.findAll() 
         .then( cookies =>  res.status(200).json(cookies) )
         .catch(err => res.status(500).json({err: err}))
 })
