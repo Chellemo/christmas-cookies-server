@@ -21,6 +21,6 @@
     "semver": "^6.3.0"
   },
   "devDependencies": {
-    "sequelize": "^5.13.0"
+    "sequelize": "^5.15.1"
   }
 }
